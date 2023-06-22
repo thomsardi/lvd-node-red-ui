@@ -1,0 +1,3454 @@
+[
+    {
+        "id": "3d2c072379a369ef",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4a07a66f9e5ef71a",
+        "type": "subflow",
+        "name": "Unpack Data",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "fd86f120f21e4bde"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 480,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "fd86f120f21e4bde",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "Data",
+                "type": "str",
+                "value": "1",
+                "ui": {
+                    "label": {
+                        "en-US": "Type"
+                    },
+                    "type": "select",
+                    "opts": {
+                        "opts": [
+                            {
+                                "l": {
+                                    "en-US": "Battery"
+                                },
+                                "v": "1"
+                            },
+                            {
+                                "l": {
+                                    "en-US": "Energy Meter"
+                                },
+                                "v": "2"
+                            },
+                            {
+                                "l": {
+                                    "en-US": "Cut Off Voltage"
+                                },
+                                "v": "3"
+                            },
+                            {
+                                "l": {
+                                    "en-US": "Reconnect Voltage"
+                                },
+                                "v": "4"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 480,
+            "y": 240,
+            "wires": [
+                {
+                    "id": "d8887d89ca84a58c",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "6e6e2173ef4f0d91",
+        "type": "subflow",
+        "name": "Battery Data Parser",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "195090fcc18a88e5"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 440,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "195090fcc18a88e5",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 440,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "195090fcc18a88e5",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 440,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "195090fcc18a88e5",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 440,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "195090fcc18a88e5",
+                        "port": 3
+                    }
+                ]
+            },
+            {
+                "x": 440,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "195090fcc18a88e5",
+                        "port": 4
+                    }
+                ]
+            },
+            {
+                "x": 440,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "195090fcc18a88e5",
+                        "port": 5
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 440,
+            "y": 400,
+            "wires": [
+                {
+                    "id": "bd545db433f756b1",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "bad5757e217a159e",
+        "type": "subflow",
+        "name": "Energy Meter Parser",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "bef3894084742c9e"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 570,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "bef3894084742c9e",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 570,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "bef3894084742c9e",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "bef3894084742c9e",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 570,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "bef3894084742c9e",
+                        "port": 3
+                    }
+                ]
+            },
+            {
+                "x": 560,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "bef3894084742c9e",
+                        "port": 4
+                    }
+                ]
+            },
+            {
+                "x": 570,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "bef3894084742c9e",
+                        "port": 5
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "inputLabels": [
+            "HTTP Data"
+        ],
+        "outputLabels": [
+            "Vsat Current",
+            "Bts Current",
+            "Other Current",
+            "Vsat Relay",
+            "Bts Relay",
+            "Other Relay"
+        ],
+        "status": {
+            "x": 520,
+            "y": 400,
+            "wires": [
+                {
+                    "id": "185c2b597a1584ed",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "b095a6dfbdd657d1",
+        "type": "subflow",
+        "name": "Parameter Parser",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "6efe11be25626c77"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 480,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "6efe11be25626c77",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 480,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "6efe11be25626c77",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 480,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "6efe11be25626c77",
+                        "port": 2
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 480,
+            "y": 260,
+            "wires": [
+                {
+                    "id": "0db27d0526ced1e7",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "053d7e7fb7dfeee7",
+        "type": "ui_tab",
+        "name": "Overview",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "23be62fa3a3a8110",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "dark"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c11ec2f0b667bd19",
+        "type": "ui_group",
+        "name": "Pack Info",
+        "tab": "053d7e7fb7dfeee7",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "04b3c879e619fd23",
+        "type": "ui_group",
+        "name": "Cut Off Parameter",
+        "tab": "7e9b168de0095721",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7e9b168de0095721",
+        "type": "ui_tab",
+        "name": "Setting",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b895b2ee5a2adc0d",
+        "type": "ui_group",
+        "name": "Energy Meter",
+        "tab": "053d7e7fb7dfeee7",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4b165812ab95970a",
+        "type": "ui_group",
+        "name": "Reconnect Parameter",
+        "tab": "7e9b168de0095721",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "53c09a8d0b08164b",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "053d7e7fb7dfeee7",
+        "order": 3,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "916bab2f73b73432",
+        "type": "ui_spacer",
+        "z": "3d2c072379a369ef",
+        "name": "spacer",
+        "group": "04b3c879e619fd23",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "5478ea7aae8624a4",
+        "type": "ui_spacer",
+        "z": "3d2c072379a369ef",
+        "name": "spacer",
+        "group": "4b165812ab95970a",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "fd86f120f21e4bde",
+        "type": "function",
+        "z": "4a07a66f9e5ef71a",
+        "name": "Unpack",
+        "func": "let type = env.get(\"Data\");\n\nif(type == \"1\")\n{\n    msg.payload = msg.payload.battery_data;\n    node.status({ fill: \"green\", shape: \"dot\", text: \"Battery\" });\n}\nelse if (type == \"2\")\n{\n    msg.payload = msg.payload.stm32_data;\n    node.status(\n        { \n            fill: \"blue\", \n            shape: \"dot\", \n            text: \"Energy Meter\" \n            }\n        \n        );\n}\nelse if (type == \"3\"){\n    msg.payload = msg.payload.low_voltage;\n    node.status(\n        {\n            fill: \"yellow\",\n            shape: \"dot\",\n            text: \"Low Voltage Parameter\"\n        }\n\n    );\n}\nelse {\n    msg.payload = msg.payload.reconnect_voltage;\n    node.status(\n        {\n            fill: \"yellow\",\n            shape: \"dot\",\n            text: \"Reconnect Voltage Parameter\"\n        }\n\n    );\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8887d89ca84a58c",
+        "type": "status",
+        "z": "4a07a66f9e5ef71a",
+        "name": "",
+        "scope": null,
+        "x": 280,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "195090fcc18a88e5",
+        "type": "function",
+        "z": "6e6e2173ef4f0d91",
+        "name": "Parser",
+        "func": "var output = [\n    {\n        payload : msg.payload.total_battery\n    },\n    {\n        payload : msg.payload.active_battery\n    },\n    {\n        payload : msg.payload.inactive_battery\n    },\n    {\n        payload : msg.payload.current / 10\n    },\n    {\n        payload : msg.payload.soc / 10\n    },\n    {\n        payload : msg.payload.voltage / 100\n    }\n]\nnode.status({ fill: \"green\", shape: \"dot\", text: \"completed\" })\nreturn output;",
+        "outputs": 6,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "bd545db433f756b1",
+        "type": "status",
+        "z": "6e6e2173ef4f0d91",
+        "name": "",
+        "scope": null,
+        "x": 260,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bef3894084742c9e",
+        "type": "function",
+        "z": "bad5757e217a159e",
+        "name": "Parser",
+        "func": "var output = [\n    {\n        payload: msg.payload[0].stm32_current[0].current / 100\n    },\n    {\n        payload: msg.payload[0].stm32_current[1].current / 100\n    },\n    {\n        payload: msg.payload[0].stm32_current[2].current / 100\n    },\n    {\n        payload: (msg.payload[0].stm32_relay >> 2) & 1\n    },\n    {\n        payload: (msg.payload[0].stm32_relay >> 1) & 1\n    },\n    {\n        payload: msg.payload[0].stm32_relay & 1\n    }\n]\nnode.status({ fill: \"green\", shape: \"dot\", text: \"completed\" })\nreturn output;",
+        "outputs": 6,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "185c2b597a1584ed",
+        "type": "status",
+        "z": "bad5757e217a159e",
+        "name": "",
+        "scope": null,
+        "x": 300,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6efe11be25626c77",
+        "type": "function",
+        "z": "b095a6dfbdd657d1",
+        "name": "Parser",
+        "func": "var output = [\n    {\n        payload: msg.payload.other\n    },\n    {\n        payload: msg.payload.bts\n    },\n    {\n        payload: msg.payload.vsat\n    }\n]\nnode.status({ fill: \"green\", shape: \"dot\", text: \"completed\" })\nreturn output;",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 120,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0db27d0526ced1e7",
+        "type": "status",
+        "z": "b095a6dfbdd657d1",
+        "name": "",
+        "scope": null,
+        "x": 320,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "578c94f1e89a0908",
+        "type": "subflow:4a07a66f9e5ef71a",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "2c1d9c1a0f0b52b8"
+            ]
+        ]
+    },
+    {
+        "id": "cbfb69e80fbb2ec6",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "f060e23f6690f912",
+                "95466ec2b0bedbef"
+            ]
+        ]
+    },
+    {
+        "id": "f060e23f6690f912",
+        "type": "http request",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.137:8000/get-data",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 180,
+        "wires": [
+            [
+                "578c94f1e89a0908",
+                "4c80c47f31fb0335",
+                "83dfecea6cf85afa"
+            ]
+        ]
+    },
+    {
+        "id": "2c1d9c1a0f0b52b8",
+        "type": "subflow:6e6e2173ef4f0d91",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "x": 710,
+        "y": 180,
+        "wires": [
+            [
+                "6e6cd9159f1de3bd"
+            ],
+            [
+                "15f5e751884f5ed6"
+            ],
+            [
+                "348b08cf602a7a56"
+            ],
+            [
+                "82c762d2aeb68758"
+            ],
+            [
+                "3ae84027237e8adb"
+            ],
+            [
+                "31cf203c0cb6c891"
+            ]
+        ]
+    },
+    {
+        "id": "31cf203c0cb6c891",
+        "type": "ui_gauge",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "group": "c11ec2f0b667bd19",
+        "order": 4,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Voltage",
+        "label": "V",
+        "format": "{{value | number:1}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#b30000",
+            "#e6e600",
+            "#60cb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 960,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3ae84027237e8adb",
+        "type": "ui_gauge",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "group": "c11ec2f0b667bd19",
+        "order": 5,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "SoC",
+        "label": "%",
+        "format": "{{value | number : 1}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#b30000",
+            "#e6e600",
+            "#60cb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 950,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "82c762d2aeb68758",
+        "type": "ui_gauge",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "group": "c11ec2f0b667bd19",
+        "order": 6,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Current",
+        "label": "A",
+        "format": "{{value | number : 1}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#b30000",
+            "#e6e600",
+            "#60cb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 960,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "348b08cf602a7a56",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "c11ec2f0b667bd19",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Inactive Battery",
+        "label": "Inactive Battery",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 980,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "15f5e751884f5ed6",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "c11ec2f0b667bd19",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Active Battery",
+        "label": "Active Battery",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 980,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6e6cd9159f1de3bd",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "c11ec2f0b667bd19",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Total Battery",
+        "label": "Total Battery",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4c80c47f31fb0335",
+        "type": "subflow:4a07a66f9e5ef71a",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "env": [
+            {
+                "name": "Data",
+                "value": "2",
+                "type": "str"
+            }
+        ],
+        "x": 510,
+        "y": 420,
+        "wires": [
+            [
+                "95907c6f0761eed7",
+                "fe089272943e6d38"
+            ]
+        ]
+    },
+    {
+        "id": "95907c6f0761eed7",
+        "type": "subflow:bad5757e217a159e",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "1831c0e33f8694e3"
+            ],
+            [
+                "0a6832169ea64dc3"
+            ],
+            [
+                "f36d25f01368033a"
+            ],
+            [
+                "d21677ae139b91b9",
+                "73bcd1faeb44dfbb"
+            ],
+            [
+                "c73fda07839cee27",
+                "df6d16f6e9189cb4"
+            ],
+            [
+                "d564e867830cab2f",
+                "afc7c2c32726d864"
+            ]
+        ]
+    },
+    {
+        "id": "1831c0e33f8694e3",
+        "type": "ui_gauge",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "group": "b895b2ee5a2adc0d",
+        "order": 6,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Vsat Current",
+        "label": "A",
+        "format": "{{value | number:1}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#b30000",
+            "#e6e600",
+            "#60cb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 970,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fe089272943e6d38",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "83dfecea6cf85afa",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "0a6832169ea64dc3",
+        "type": "ui_gauge",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "group": "b895b2ee5a2adc0d",
+        "order": 5,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "BTS Current",
+        "label": "A",
+        "format": "{{value | number:1}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#b30000",
+            "#e6e600",
+            "#60cb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 970,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f36d25f01368033a",
+        "type": "ui_gauge",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "group": "b895b2ee5a2adc0d",
+        "order": 4,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Other Current",
+        "label": "A",
+        "format": "{{value | number:1}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#b30000",
+            "#e6e600",
+            "#60cb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 980,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c8db7acc892237b9",
+        "type": "ui_switch",
+        "z": "3d2c072379a369ef",
+        "name": "Vsat Status",
+        "label": "Vsat Relay",
+        "tooltip": "",
+        "group": "b895b2ee5a2adc0d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "check_circle",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "cancel",
+        "offcolor": "red",
+        "animate": true,
+        "className": "",
+        "x": 1210,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d21677ae139b91b9",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 460,
+        "wires": [
+            [
+                "c8db7acc892237b9"
+            ]
+        ]
+    },
+    {
+        "id": "c73fda07839cee27",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 500,
+        "wires": [
+            [
+                "39c07e8feebc791f"
+            ]
+        ]
+    },
+    {
+        "id": "d564e867830cab2f",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 540,
+        "wires": [
+            [
+                "b5012078f9f803a3"
+            ]
+        ]
+    },
+    {
+        "id": "39c07e8feebc791f",
+        "type": "ui_switch",
+        "z": "3d2c072379a369ef",
+        "name": "BTS Status",
+        "label": "BTS Relay",
+        "tooltip": "",
+        "group": "b895b2ee5a2adc0d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "check_circle",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "cancel",
+        "offcolor": "red",
+        "animate": true,
+        "className": "",
+        "x": 1210,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b5012078f9f803a3",
+        "type": "ui_switch",
+        "z": "3d2c072379a369ef",
+        "name": "Other Status",
+        "label": "Other Relay",
+        "tooltip": "",
+        "group": "b895b2ee5a2adc0d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "check_circle",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "cancel",
+        "offcolor": "red",
+        "animate": true,
+        "className": "",
+        "x": 1210,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb3a30eeaf7c68d4",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "04b3c879e619fd23",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Other Cut Off",
+        "label": "Other Cut Off (x0.01)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "c5a215ca0f10aa1c",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "04b3c879e619fd23",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "BTS Cut Off",
+        "label": "BTS Cut Off (x0.01)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "d7a6bc4cde7fc3ca",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "04b3c879e619fd23",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Vsat Cut Off",
+        "label": "Vsat Cut Off (x0.01)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b9b21c4a3c7e7e18",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "4b165812ab95970a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Other Reconnect",
+        "label": "Other Reconnect (x0.01)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 990,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "8eb4f386dc804a26",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "4b165812ab95970a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "BTS Reconnect",
+        "label": "BTS Reconnect (x0.01)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 980,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "0387a254673bc65e",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "4b165812ab95970a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Vsat Reconnect",
+        "label": "Vsat Reconnect (x0.01)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 980,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "103bc7e22e564d09",
+        "type": "subflow:4a07a66f9e5ef71a",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "env": [
+            {
+                "name": "Data",
+                "value": "3",
+                "type": "str"
+            }
+        ],
+        "x": 510,
+        "y": 620,
+        "wires": [
+            [
+                "365ab27bfba9d11c"
+            ]
+        ]
+    },
+    {
+        "id": "95466ec2b0bedbef",
+        "type": "http request",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.137:8000/get-param",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "103bc7e22e564d09",
+                "7350420f4b516a56"
+            ]
+        ]
+    },
+    {
+        "id": "7350420f4b516a56",
+        "type": "subflow:4a07a66f9e5ef71a",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "env": [
+            {
+                "name": "Data",
+                "value": "4",
+                "type": "str"
+            }
+        ],
+        "x": 510,
+        "y": 760,
+        "wires": [
+            [
+                "0ff80dd4e1065ee4"
+            ]
+        ]
+    },
+    {
+        "id": "365ab27bfba9d11c",
+        "type": "subflow:b095a6dfbdd657d1",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "x": 700,
+        "y": 620,
+        "wires": [
+            [
+                "bb3a30eeaf7c68d4"
+            ],
+            [
+                "c5a215ca0f10aa1c"
+            ],
+            [
+                "d7a6bc4cde7fc3ca"
+            ]
+        ]
+    },
+    {
+        "id": "0ff80dd4e1065ee4",
+        "type": "subflow:b095a6dfbdd657d1",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "x": 700,
+        "y": 760,
+        "wires": [
+            [
+                "b9b21c4a3c7e7e18"
+            ],
+            [
+                "8eb4f386dc804a26"
+            ],
+            [
+                "0387a254673bc65e"
+            ]
+        ]
+    },
+    {
+        "id": "3416b9b3928e5dd5",
+        "type": "ui_numeric",
+        "z": "3d2c072379a369ef",
+        "name": "Other Cut Off Write",
+        "label": "Other Cut Off (x0.01)",
+        "tooltip": "",
+        "group": "04b3c879e619fd23",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "5400",
+        "step": "50",
+        "className": "",
+        "x": 650,
+        "y": 900,
+        "wires": [
+            [
+                "07e41f59d5ef30aa",
+                "4e6e58ec25c98502"
+            ]
+        ]
+    },
+    {
+        "id": "4e6e58ec25c98502",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 1",
+        "func": "var value = msg.payload\nflow.set(\"other_cut_off\", value)\nmsg.payload = value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"other_cut_off\", 4600)",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 900,
+        "wires": [
+            [
+                "9c3fcb5eea092e66"
+            ]
+        ]
+    },
+    {
+        "id": "39a0ae0af16252ea",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 2",
+        "func": "flow.set(\"bts_cut_off\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"bts_cut_off\", 4700)",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 940,
+        "wires": [
+            [
+                "b798bca1ad9aa332"
+            ]
+        ]
+    },
+    {
+        "id": "6a52d5668fb3f685",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 3",
+        "func": "flow.set(\"vsat_cut_off\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"vsat_cut_off\", 4600)",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 980,
+        "wires": [
+            [
+                "74090e87ef511623"
+            ]
+        ]
+    },
+    {
+        "id": "928451e3863bb3db",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 4",
+        "func": "flow.set(\"other_reconnect\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"other_reconnect\", 4700)",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0a1471c2930e36c8",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 5",
+        "func": "flow.set(\"bts_reconnect\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"bts_reconnect\", 4800)",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48585a887c4b2608",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 6",
+        "func": "flow.set(\"vsat_reconnect\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"vsat_reconnect\", 4700)",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63958c781a6dbdb6",
+        "type": "ui_numeric",
+        "z": "3d2c072379a369ef",
+        "name": "BTS Cut Off Write",
+        "label": "BTS Cut Off (x0.01)",
+        "tooltip": "",
+        "group": "04b3c879e619fd23",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "5400",
+        "step": "50",
+        "className": "",
+        "x": 650,
+        "y": 940,
+        "wires": [
+            [
+                "39a0ae0af16252ea"
+            ]
+        ]
+    },
+    {
+        "id": "c9a7176477beeb94",
+        "type": "ui_numeric",
+        "z": "3d2c072379a369ef",
+        "name": "Vsat Cut Off Write",
+        "label": "Vsat Cut Off (x0.01)",
+        "tooltip": "",
+        "group": "04b3c879e619fd23",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "5400",
+        "step": "50",
+        "className": "",
+        "x": 650,
+        "y": 980,
+        "wires": [
+            [
+                "6a52d5668fb3f685"
+            ]
+        ]
+    },
+    {
+        "id": "3b9ed02d7a856b08",
+        "type": "ui_numeric",
+        "z": "3d2c072379a369ef",
+        "name": "Other Reconnect Write",
+        "label": "Other Reconnect (x0.01)",
+        "tooltip": "",
+        "group": "4b165812ab95970a",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "5400",
+        "step": "50",
+        "className": "",
+        "x": 660,
+        "y": 1100,
+        "wires": [
+            [
+                "928451e3863bb3db"
+            ]
+        ]
+    },
+    {
+        "id": "c68863c98747b968",
+        "type": "ui_numeric",
+        "z": "3d2c072379a369ef",
+        "name": "BTS Reconnect Write",
+        "label": "BTS Reconnect (x0.01)",
+        "tooltip": "",
+        "group": "4b165812ab95970a",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "5400",
+        "step": "50",
+        "className": "",
+        "x": 660,
+        "y": 1140,
+        "wires": [
+            [
+                "0a1471c2930e36c8"
+            ]
+        ]
+    },
+    {
+        "id": "6ba998ee5e78a4d8",
+        "type": "ui_numeric",
+        "z": "3d2c072379a369ef",
+        "name": "Vsat Reconnect Write",
+        "label": "Vsat Reconnect (x0.01)",
+        "tooltip": "",
+        "group": "4b165812ab95970a",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "5400",
+        "step": "50",
+        "className": "",
+        "x": 660,
+        "y": 1180,
+        "wires": [
+            [
+                "48585a887c4b2608"
+            ]
+        ]
+    },
+    {
+        "id": "72cfc0178b925ce3",
+        "type": "ui_button",
+        "z": "3d2c072379a369ef",
+        "name": "Apply Cut Off",
+        "group": "04b3c879e619fd23",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Apply",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 1020,
+        "wires": [
+            [
+                "216a278eb980fad4"
+            ]
+        ]
+    },
+    {
+        "id": "852cfed969763d82",
+        "type": "ui_button",
+        "z": "3d2c072379a369ef",
+        "name": "Apply Reconnect",
+        "group": "4b165812ab95970a",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Apply",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 650,
+        "y": 1220,
+        "wires": [
+            [
+                "775395e7a83ffd7d"
+            ]
+        ]
+    },
+    {
+        "id": "bf958b9a10315291",
+        "type": "http request",
+        "z": "3d2c072379a369ef",
+        "name": "cut off config",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.137:8000/lvd-low-voltage-config",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1090,
+        "y": 1060,
+        "wires": [
+            [
+                "b68e92831bdbacfe"
+            ]
+        ]
+    },
+    {
+        "id": "0cc6e70f6e942da3",
+        "type": "http request",
+        "z": "3d2c072379a369ef",
+        "name": "reconnect config",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.137:8000/lvd-reconnect-voltage-config",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1240,
+        "y": 1280,
+        "wires": [
+            [
+                "f9d66c9a134158a0"
+            ]
+        ]
+    },
+    {
+        "id": "216a278eb980fad4",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "Build Config",
+        "func": "var msg = {\n    payload : {\n        vsat: flow.get(\"vsat_cut_off\"),\n        bts: flow.get(\"bts_cut_off\"),\n        other: flow.get(\"other_cut_off\")\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1020,
+        "wires": [
+            [
+                "0b005bb8629fa3b4",
+                "bf958b9a10315291"
+            ]
+        ]
+    },
+    {
+        "id": "0b005bb8629fa3b4",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "775395e7a83ffd7d",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "Build Reconnect Config",
+        "func": "var msg = {\n    payload : {\n        vsat: flow.get(\"vsat_reconnect\"),\n        bts: flow.get(\"bts_reconnect\"),\n        other: flow.get(\"other_reconnect\")\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1220,
+        "wires": [
+            [
+                "66047e65f7c7d721",
+                "0cc6e70f6e942da3"
+            ]
+        ]
+    },
+    {
+        "id": "66047e65f7c7d721",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "9c3fcb5eea092e66",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "07e41f59d5ef30aa",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "48a97df0cb636858",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "97575d26f3febfa4",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "4600",
+        "payloadType": "num",
+        "x": 450,
+        "y": 900,
+        "wires": [
+            [
+                "3416b9b3928e5dd5",
+                "48a97df0cb636858"
+            ]
+        ]
+    },
+    {
+        "id": "5d618ab9e555c194",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "4700",
+        "payloadType": "num",
+        "x": 450,
+        "y": 940,
+        "wires": [
+            [
+                "63958c781a6dbdb6"
+            ]
+        ]
+    },
+    {
+        "id": "f31b84627674618f",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "4600",
+        "payloadType": "num",
+        "x": 450,
+        "y": 980,
+        "wires": [
+            [
+                "c9a7176477beeb94"
+            ]
+        ]
+    },
+    {
+        "id": "369e13ddc984f20f",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "4700",
+        "payloadType": "num",
+        "x": 450,
+        "y": 1100,
+        "wires": [
+            [
+                "3b9ed02d7a856b08"
+            ]
+        ]
+    },
+    {
+        "id": "ea46ec0fa46e2091",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "4800",
+        "payloadType": "num",
+        "x": 450,
+        "y": 1140,
+        "wires": [
+            [
+                "c68863c98747b968"
+            ]
+        ]
+    },
+    {
+        "id": "031ef2dcae2c9830",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "4700",
+        "payloadType": "num",
+        "x": 450,
+        "y": 1180,
+        "wires": [
+            [
+                "6ba998ee5e78a4d8"
+            ]
+        ]
+    },
+    {
+        "id": "b798bca1ad9aa332",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "74090e87ef511623",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "429e7b1be80a906d",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 1020,
+        "wires": [
+            [
+                "72cfc0178b925ce3"
+            ]
+        ]
+    },
+    {
+        "id": "bfdb7a17685ec873",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 1220,
+        "wires": [
+            [
+                "852cfed969763d82"
+            ]
+        ]
+    },
+    {
+        "id": "b68e92831bdbacfe",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "f9d66c9a134158a0",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "c92783c7f67518d0",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "04b3c879e619fd23",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Current Config Cut Off",
+        "label": "Current Config",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "18",
+        "color": "#0a92a4",
+        "x": 960,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "8ec325ec66e0cc67",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "04b3c879e619fd23",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Write Config Cut Off",
+        "label": "Write Config",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "18",
+        "color": "#0a92a4",
+        "x": 960,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "cf891327f771f7be",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "4b165812ab95970a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Current Config Reconnect",
+        "label": "Current Config",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "18",
+        "color": "#0a92a4",
+        "x": 970,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "87c83ba0f07ff5f2",
+        "type": "ui_text",
+        "z": "3d2c072379a369ef",
+        "group": "4b165812ab95970a",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Write Config Reconnect",
+        "label": "Write Config",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "18",
+        "color": "#0a92a4",
+        "x": 970,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "f6e88ed7997afbbb",
+        "type": "ui_switch",
+        "z": "3d2c072379a369ef",
+        "name": "Override",
+        "label": "Override",
+        "tooltip": "",
+        "group": "53c09a8d0b08164b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 920,
+        "y": 1500,
+        "wires": [
+            [
+                "01cfd3a1b1862fdc"
+            ]
+        ]
+    },
+    {
+        "id": "6e213541c34f3e89",
+        "type": "ui_switch",
+        "z": "3d2c072379a369ef",
+        "name": "Other Relay Switch",
+        "label": "Other Relay Switch",
+        "tooltip": "",
+        "group": "53c09a8d0b08164b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1050,
+        "y": 1560,
+        "wires": [
+            [
+                "682df958ca0ae7f3"
+            ]
+        ]
+    },
+    {
+        "id": "0822f70891168719",
+        "type": "ui_switch",
+        "z": "3d2c072379a369ef",
+        "name": "BTS Relay Switch",
+        "label": "BTS Relay Switch",
+        "tooltip": "",
+        "group": "53c09a8d0b08164b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1050,
+        "y": 1600,
+        "wires": [
+            [
+                "61fb70c030cf842e"
+            ]
+        ]
+    },
+    {
+        "id": "2955d5c389ebb3ac",
+        "type": "ui_switch",
+        "z": "3d2c072379a369ef",
+        "name": "Vsat Relay Switch",
+        "label": "Vsat Relay Switch",
+        "tooltip": "",
+        "group": "53c09a8d0b08164b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1050,
+        "y": 1640,
+        "wires": [
+            [
+                "bf24b177dc56799a"
+            ]
+        ]
+    },
+    {
+        "id": "991204d557c41625",
+        "type": "http request",
+        "z": "3d2c072379a369ef",
+        "name": "override",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.137:8000/override",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1580,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0696b5683fa158c5",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "override build & set",
+        "func": "var output = {\n    payload: {\n        override : msg.payload\n    }\n}\nflow.set(\"override_status\", msg.payload)\nreturn output;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"override_status\", 0)",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 1500,
+        "wires": [
+            [
+                "991204d557c41625"
+            ]
+        ]
+    },
+    {
+        "id": "01cfd3a1b1862fdc",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 1500,
+        "wires": [
+            [
+                "0696b5683fa158c5"
+            ]
+        ]
+    },
+    {
+        "id": "5afb6ff39a84bf91",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 1560,
+        "wires": [
+            [
+                "db9111ac542ed1c1"
+            ]
+        ]
+    },
+    {
+        "id": "e6be8508921a9f2e",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "3",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "4",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 1600,
+        "wires": [
+            [
+                "7c02bf4b62640c48"
+            ]
+        ]
+    },
+    {
+        "id": "48087c400221b077",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "5",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "6",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 1640,
+        "wires": [
+            [
+                "435822a3d865fb13"
+            ]
+        ]
+    },
+    {
+        "id": "db9111ac542ed1c1",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 8",
+        "func": "var output = {\n    payload: {\n        relay : msg.payload\n    }\n}\nreturn output;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 1560,
+        "wires": [
+            [
+                "b876cedff3ca443b"
+            ]
+        ]
+    },
+    {
+        "id": "7c02bf4b62640c48",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 9",
+        "func": "var output = {\n    payload: {\n        relay : msg.payload\n    }\n}\nreturn output;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 1600,
+        "wires": [
+            [
+                "80c653b6f80dd3b3"
+            ]
+        ]
+    },
+    {
+        "id": "435822a3d865fb13",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 10",
+        "func": "var output = {\n    payload: {\n        relay : msg.payload\n    }\n}\nreturn output;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 1640,
+        "wires": [
+            [
+                "c29d9182c6055032"
+            ]
+        ]
+    },
+    {
+        "id": "fd0b07c460029514",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 530,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8692de5e1f5a5e9f",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 540,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b876cedff3ca443b",
+        "type": "http request",
+        "z": "3d2c072379a369ef",
+        "name": "other relay POST",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.137:8000/relay",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1930,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80c653b6f80dd3b3",
+        "type": "http request",
+        "z": "3d2c072379a369ef",
+        "name": "bts relay POST",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.137:8000/relay",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1920,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c29d9182c6055032",
+        "type": "http request",
+        "z": "3d2c072379a369ef",
+        "name": "vsat relay POST",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.2.137:8000/relay",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1920,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73bcd1faeb44dfbb",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "otherRelay",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df6d16f6e9189cb4",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "btsRelay",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "afc7c2c32726d864",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vsatRelay",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0dc274e346317356",
+        "type": "switch",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "property": "override_status",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 270,
+        "y": 1560,
+        "wires": [
+            [
+                "b2a593946f2ce257",
+                "952c27b2784711a1",
+                "d7828bf00e9cc086"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b2a593946f2ce257",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "otherRelay",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 1560,
+        "wires": [
+            [
+                "8cf86d9311422755"
+            ]
+        ]
+    },
+    {
+        "id": "8cf86d9311422755",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 1560,
+        "wires": [
+            [
+                "5d2c63e836f17c36"
+            ]
+        ]
+    },
+    {
+        "id": "952c27b2784711a1",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "btsRelay",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 1600,
+        "wires": [
+            [
+                "8b4bcff8688af726"
+            ]
+        ]
+    },
+    {
+        "id": "8b4bcff8688af726",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 1600,
+        "wires": [
+            [
+                "733f47a3d0b26812"
+            ]
+        ]
+    },
+    {
+        "id": "d7828bf00e9cc086",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "vsatRelay",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 1640,
+        "wires": [
+            [
+                "2a8fbae71dceeed3"
+            ]
+        ]
+    },
+    {
+        "id": "2a8fbae71dceeed3",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 1640,
+        "wires": [
+            [
+                "6d2fdcac1f57ce4c"
+            ]
+        ]
+    },
+    {
+        "id": "5d2c63e836f17c36",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 11",
+        "func": "msg.enabled = false\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1560,
+        "wires": [
+            [
+                "6e213541c34f3e89"
+            ]
+        ]
+    },
+    {
+        "id": "733f47a3d0b26812",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 12",
+        "func": "msg.enabled = false\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1600,
+        "wires": [
+            [
+                "0822f70891168719"
+            ]
+        ]
+    },
+    {
+        "id": "6d2fdcac1f57ce4c",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 13",
+        "func": "msg.enabled = false\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1640,
+        "wires": [
+            [
+                "2955d5c389ebb3ac"
+            ]
+        ]
+    },
+    {
+        "id": "682df958ca0ae7f3",
+        "type": "switch",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "property": "override_status",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1270,
+        "y": 1560,
+        "wires": [
+            [
+                "5afb6ff39a84bf91"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "76ac6e7958b4fda7",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1560,
+        "wires": [
+            [
+                "0dc274e346317356"
+            ]
+        ]
+    },
+    {
+        "id": "1c129595fe47b837",
+        "type": "function",
+        "z": "3d2c072379a369ef",
+        "name": "function 14",
+        "func": "msg.enabled = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 1700,
+        "wires": [
+            [
+                "6e213541c34f3e89",
+                "0822f70891168719",
+                "2955d5c389ebb3ac"
+            ]
+        ]
+    },
+    {
+        "id": "61fb70c030cf842e",
+        "type": "switch",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "property": "override_status",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1270,
+        "y": 1600,
+        "wires": [
+            [
+                "e6be8508921a9f2e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bf24b177dc56799a",
+        "type": "switch",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "property": "override_status",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1270,
+        "y": 1640,
+        "wires": [
+            [
+                "48087c400221b077"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5dc6b9bf8db0beab",
+        "type": "complete",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "scope": [
+            "0696b5683fa158c5"
+        ],
+        "uncaught": false,
+        "x": 90,
+        "y": 1700,
+        "wires": [
+            [
+                "1dbf10893cbc7baa"
+            ]
+        ]
+    },
+    {
+        "id": "1dbf10893cbc7baa",
+        "type": "switch",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 1700,
+        "wires": [
+            [
+                "1c129595fe47b837"
+            ]
+        ]
+    }
+]
