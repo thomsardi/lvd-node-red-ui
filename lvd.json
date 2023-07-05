@@ -351,6 +351,45 @@
         }
     },
     {
+        "id": "210a77808c6437ea",
+        "type": "subflow",
+        "name": "Build Endpoint",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "8ff0c95b2d2b4f32"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 640,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "8ff0c95b2d2b4f32",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "string",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
         "id": "053d7e7fb7dfeee7",
         "type": "ui_tab",
         "name": "Overview",
@@ -665,6 +704,23 @@
         "scope": null,
         "x": 320,
         "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ff0c95b2d2b4f32",
+        "type": "function",
+        "z": "210a77808c6437ea",
+        "name": "function 16",
+        "func": "let endpoint = env.get(\"string\");\nlet url = \"\";\nurl = msg.payload\nmsg.url = url.concat(endpoint);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 40,
         "wires": [
             []
         ]
@@ -3350,79 +3406,6 @@
         ]
     },
     {
-        "id": "210a77808c6437ea",
-        "type": "subflow",
-        "name": "Build Endpoint",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 50,
-                "y": 30,
-                "wires": [
-                    {
-                        "id": "8ff0c95b2d2b4f32"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 640,
-                "y": 40,
-                "wires": [
-                    {
-                        "id": "8ff0c95b2d2b4f32",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [
-            {
-                "name": "string",
-                "type": "str",
-                "value": ""
-            }
-        ],
-        "meta": {},
-        "color": "#DDAA99"
-    },
-    {
-        "id": "8ff0c95b2d2b4f32",
-        "type": "function",
-        "z": "210a77808c6437ea",
-        "name": "function 16",
-        "func": "let endpoint = env.get(\"string\");\nlet url = \"\";\nurl = msg.payload\nmsg.url = url.concat(endpoint);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 330,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "96f0d98fa97b5ebb",
-        "type": "function",
-        "z": "3d2c072379a369ef",
-        "name": "function 15",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"url\", \"http://192.168.2.182:8001/\")",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "04fe8f18e4c18e7d",
         "type": "subflow:210a77808c6437ea",
         "z": "3d2c072379a369ef",
@@ -3504,7 +3487,8 @@
         "y": 180,
         "wires": [
             [
-                "f060e23f6690f912"
+                "f060e23f6690f912",
+                "7e2e1a46e985e7ff"
             ]
         ]
     },
@@ -3769,6 +3753,77 @@
         "statusType": "auto",
         "x": 2060,
         "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "515961177189d6ec",
+        "type": "inject",
+        "z": "3d2c072379a369ef",
+        "name": "set base url",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "http://192.168.2.182:8001/",
+        "payloadType": "str",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "9775431b5deb2578"
+            ]
+        ]
+    },
+    {
+        "id": "9775431b5deb2578",
+        "type": "change",
+        "z": "3d2c072379a369ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e2e1a46e985e7ff",
+        "type": "debug",
+        "z": "3d2c072379a369ef",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "url",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 240,
         "wires": []
     }
 ]
